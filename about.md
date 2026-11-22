@@ -16,7 +16,7 @@ nav_order: 4
 
 ## 怎么联系我
 
-- 邮箱：你的邮箱@example.com（换成自己的）
-- GitHub：[github.com/你的用户名](https://github.com/你的用户名)
+- 邮箱：待填（想公开再写）
+- GitHub：[github.com/dongrunxi](https://github.com/dongrunxi)
 
-> 上面两处都要改成你自己的，别直接发布。
+> 邮箱一处留空即可，不必公开。
