@@ -26,3 +26,6 @@ footer_content: "© 2026 董润曦 · 用 Markdown 写的博客"
 exclude:
   - README.md
   - "*.zip"
+
+# 让网址不带 .html 后缀（/first-post/ 而不是 /first-post.html）
+permalink: pretty
