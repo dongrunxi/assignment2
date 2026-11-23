@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: paper
+type: post
 title: "第一篇：我为什么开始写博客"
 nav_order: 2
+date: 2026-11-01
+cat: 随笔
+kicker: 随笔
+tags: [起点, 写作]
 ---
 
 2026 年 11 月 · 随笔
