@@ -1,0 +1,27 @@
+---
+layout: paper
+title: 归档
+kicker: 按时间
+permalink: /archive/
+---
+
+{% assign posts = site.pages | where: "type", "post" | sort: "date" | reverse %}
+
+<p>共 <strong>{{ posts | size }}</strong> 篇。新的在上面。</p>
+
+<div class="arc">
+{% assign cy = "" %}
+{% for p in posts %}
+  {% assign y = p.date | date: "%Y" %}
+  {% if y != cy %}
+  <div class="arc-year">{{ y }}</div>
+  {% assign cy = y %}
+  {% endif %}
+  <div class="arc-item">
+    <span class="d">{{ p.date | date: "%-m 月 %-d 日" }}</span>
+    <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+  </div>
+{% endfor %}
+</div>
+
+<div class="arc-foot">写下来的都在这儿，没写的不算数。</div>
