@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: paper
+type: post
 title: "第二篇：我的 Markdown 速查表"
 nav_order: 3
+date: 2026-11-05
+cat: 工具
+kicker: 工具
+tags: [Markdown, 工具]
 ---
 
 2026 年 11 月 · 工具
