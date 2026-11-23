@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: paper
+type: post
 title: "三个人、六个文件、改到 v3.13"
 nav_order: 6
+date: 2026-11-23
+cat: 实践复盘
+kicker: 实践复盘
+tags: [复盘, 协作, 数据]
 ---
 
 2026 年 11 月 23 日 · 实践复盘 · [→ 看交互视觉版]({{ '/v313-art/' | relative_url }})
