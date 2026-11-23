@@ -1,0 +1,57 @@
+---
+layout: paper
+title: 董润曦
+subtitle: 在文字与数据之间，练习把一件事说清楚。
+hero: true
+---
+
+{% assign posts = site.pages | where: "type", "post" | sort: "nav_order" | reverse %}
+
+<section>
+  <div class="sect-head">
+    <h2>最新文章</h2>
+    <span class="cnt">共 {{ posts | size }} 篇</span>
+  </div>
+
+  <div class="cards">
+    {% for p in posts %}
+    <a class="card" href="{{ p.url | relative_url }}">
+      <span class="strip"></span>
+      <div class="row">
+        <h3>{{ p.title }}</h3>
+        {% if p.date %}<span class="date">{{ p.date | date: "%Y 年 %-m 月 %-d 日" }}</span>{% endif %}
+      </div>
+      <p class="ex">{{ p.content | strip_html | strip_newlines | truncate: 96 }}</p>
+      {% if p.tags %}
+      <div class="tags">
+        {% for t in p.tags %}<span class="tag"># {{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="sect-head">
+    <h2>这里会有什么</h2>
+    <span class="cnt">三种写法</span>
+  </div>
+  <div class="cards">
+    <div class="card" style="cursor:default;">
+      <span class="strip"></span>
+      <div class="row"><h3>课程笔记</h3></div>
+      <p class="ex">新闻传播、新媒体相关的知识点，按主题整理，不按课堂顺序。</p>
+    </div>
+    <div class="card" style="cursor:default;">
+      <span class="strip"></span>
+      <div class="row"><h3>实践记录</h3></div>
+      <p class="ex">做 H5、做数据图时遇到的问题。写坑，不写成功学。</p>
+    </div>
+    <div class="card" style="cursor:default;">
+      <span class="strip"></span>
+      <div class="row"><h3>读书与看片</h3></div>
+      <p class="ex">留下来的句子，加上我自己的判断。判断错了也留着。</p>
+    </div>
+  </div>
+</section>
