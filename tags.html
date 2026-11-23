@@ -1,0 +1,33 @@
+---
+layout: paper
+title: 标签
+kicker: 索引
+permalink: /tags/
+---
+
+{% assign posts = site.pages | where: "type", "post" %}
+{% assign raw = "" | split: "" %}
+{% for p in posts %}{% for t in p.tags %}{% assign raw = raw | push: t %}{% endfor %}{% endfor %}
+{% assign tags = raw | uniq | sort %}
+
+<p>同一件事换个角度写。<strong>{{ posts | size }}</strong> 篇文章，一共落在 <strong>{{ tags | size }}</strong> 个标签上。点标签，看同类。</p>
+
+<div class="tagwall">
+{% for t in tags %}<a href="#{{ t }}"># {{ t }}</a>{% endfor %}
+</div>
+
+{% for t in tags %}
+<div class="tag-group" id="{{ t }}">
+  <h2><em>#</em> {{ t }}</h2>
+  <div class="tag-list">
+  {% for p in posts %}
+    {% if p.tags contains t %}
+    <a href="{{ p.url | relative_url }}">
+      <span>{{ p.title }}</span>
+      <span class="d">{{ p.date | date: "%Y-%m-%d" }}</span>
+    </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+{% endfor %}
