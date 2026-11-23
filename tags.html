@@ -16,9 +16,10 @@ permalink: /tags/
 {% for t in tags %}<a href="#{{ t }}"># {{ t }}</a>{% endfor %}
 </div>
 
+<div class="tag-groups">
 {% for t in tags %}
 <div class="tag-group" id="{{ t }}">
-  <h2><em>#</em> {{ t }}</h2>
+  <h2><em>#</em>{{ t }}</h2>
   <div class="tag-list">
   {% for p in posts %}
     {% if p.tags contains t %}
@@ -31,3 +32,4 @@ permalink: /tags/
   </div>
 </div>
 {% endfor %}
+</div>
