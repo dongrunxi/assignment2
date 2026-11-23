@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: paper
 title: 关于我
 nav_order: 4
 ---
