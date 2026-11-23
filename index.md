@@ -17,6 +17,7 @@ nav_order: 1
 
 ## 从哪篇开始看
 
+- [最新：三个人、六个文件、改到 v3.13]({{ '/v313-three-people-six-files/' | relative_url }})
 - [第一篇：我为什么开始写博客]({{ '/first-post/' | relative_url }})
 - [第二篇：我的 Markdown 速查表]({{ '/second-post/' | relative_url }})
 - [关于我]({{ '/about/' | relative_url }})
