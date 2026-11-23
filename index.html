@@ -21,7 +21,7 @@ hero: true
         <h3>{{ p.title }}</h3>
         {% if p.date %}<span class="date">{{ p.date | date: "%Y 年 %-m 月 %-d 日" }}</span>{% endif %}
       </div>
-      <p class="ex">{{ p.content | strip_html | strip_newlines | truncate: 96 }}</p>
+      <p class="ex">{% if p.excerpt %}{{ p.excerpt }}{% else %}{{ p.content | strip_html | strip_newlines | truncate: 96 }}{% endif %}</p>
       {% if p.tags %}
       <div class="tags">
         {% for t in p.tags %}<span class="tag"># {{ t }}</span>{% endfor %}
